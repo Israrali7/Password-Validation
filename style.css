@@ -1,0 +1,72 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    /* background: linear-gradient(
+    180deg,
+     rgb(210, 110, 102)0%,
+     rgb(113, 166, 206)100%
+    ) */
+     font: 1em sans-serif;}
+h1{
+    font-size: 2.6rem;
+}
+h2{
+    font-size: 2rem;
+}
+#screen {
+    width: 350px; /* Set desired width */
+    height: 40px; /* Set desired height */
+    font-size: x-large;
+    outline: 0;
+}
+.input-container {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    padding-right: 40px; /* Adjust padding to make space for the icon */
+    font-size: 16px;
+}
+
+.input-container .eye-icon {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.main{
+    border: 1px solid black;
+    margin-top: 3rem;
+    padding: 2.3rem;
+    border-radius: 8px;
+    background-color: #f5f9f1f6;
+}
+li{
+    font-size: x-large;
+    /* color: red; */
+    background-color: #ed6b6b;
+    padding: 5px;
+    border-radius: 7px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 30%; /* Adjust the width as needed */
+    /* padding-top: ; */
+}
+.Check{
+    padding: 5px;
+    margin-top:9px;
+    padding-right: 8px;
+}
+.new{
+    background-color: green;
+}
