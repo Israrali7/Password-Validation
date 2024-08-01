@@ -1,42 +1,69 @@
-// let showPass = document.getElementById('showpass')
-// let input = document.getElementById('password')
-// showPass.addEventListener('click',()=> {
-//     if (input.type === 'password') {
-//         input.type = 'text';
-//     } else {
-//         input.type = 'password';
-//     }
-
-// })
-let password = document.getElementById('password')
-let Check = document.querySelector('Check')
-let chart = document.getElementById('chart')
-let uppercase = document.getElementById('uppercase')
-let lowercase = document.getElementById('lowercase')
-function che() {
-    var pass = password.value
-    var arr = pass.split('');
-    for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
-        console.log(element);
-        var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"
-        var specialChar = "!@#$%^&*()-=_+"
-        var numberChar = "123456789"
-        switch (element) {
-            case uppercaseChar[i] :
-                uppercase.classList.add('new');
-            case lowercaseChar[i] :
-                    lowercasecase.classList.add('new');
-            case specialChar[i] :
-                    special.classList.add('new');
-            case numberChar[i] :
-                    number.classList.add('new');
-            case length <= 9 :
-                    length.classList.add('new');   
-            // default:
-            //     alert('YoUr Password Not seems strong')
-            // break;
-            }
+let showPass = document.getElementById('showpass')
+let input = document.getElementById('password')
+showPass.addEventListener('click',()=> {
+    if (input.type === 'password') {
+        input.type = 'text';
+    } else {
+        input.type = 'password';
     }
-}
+
+})
+
+
+let password = document.getElementById('password');
+let uppercase = document.getElementById('uppercase');
+let lowercase = document.getElementById('lowercase');
+let special = document.getElementById('special');
+let number = document.getElementById('number');
+let length = document.getElementById('length');
+
+password.addEventListener('input', () => {
+    let pass = password.value;
+    let hasUppercase = false;
+    let hasLowercase = false;
+    let hasSpecial = false;
+    let hasNumber = false;
+
+    for (let i = 0; i < pass.length; i++) {
+        let char = pass[i];
+        if ('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(char)) {
+            hasUppercase = true;
+        } else if ('abcdefghijklmnopqrstuvwxyz'.includes(char)) {
+            hasLowercase = true;
+        } else if ('!@#$%^&*()-=_+'.includes(char)) {
+            hasSpecial = true;
+        } else if ('1234567890'.includes(char)) {
+            hasNumber = true;
+        }
+    }
+
+    if (hasUppercase) {
+        uppercase.classList.add('new');
+    } else {
+        uppercase.classList.remove('new');
+    }
+
+    if (hasLowercase) {
+        lowercase.classList.add('new');
+    } else {
+        lowercase.classList.remove('new');
+    }
+
+    if (hasSpecial) {
+        special.classList.add('new');
+    } else {
+        special.classList.remove('new');
+    }
+
+    if (hasNumber) {
+        number.classList.add('new');
+    } else {
+        number.classList.remove('new');
+    }
+
+    if (pass.length >= 8) {
+        length.classList.add('new');
+    } else {
+        length.classList.remove('new');
+    }
+});

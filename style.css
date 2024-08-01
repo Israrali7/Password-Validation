@@ -28,13 +28,17 @@ h2{
     width: 100%;
     padding: 10px;
     outline: none;
-    padding-right: 40px; /* Adjust padding to make space for the icon */
+    /* padding-right: 20px; Adjust padding to make space for the icon */
     font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    outline: none;
 }
 
 .input-container .eye-icon {
     position: absolute;
     right: 0px;
+    left: 280px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -51,6 +55,7 @@ li{
     /* color: red; */
     background-color: #ed6b6b;
     padding: 5px;
+    color: #fff;
     border-radius: 7px;
     margin-bottom: 8px;
     font-weight: 500;
@@ -62,7 +67,7 @@ li{
     width: 30%; /* Adjust the width as needed */
     /* padding-top: ; */
 }
-.Check{
+#Check{
     padding: 5px;
     margin-top:9px;
     padding-right: 8px;
